@@ -18,13 +18,26 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 
 ![Curl commando](doc/screenshot2.png)
 
-Als je je eigen username onderaan terug ziet verschijnen gevolgd door @localhost dan is het commando klaar en kan je naar de volgende stap.
+Als je je eigen username onderaan terug ziet verschijnen dan is het commando klaar en kan je naar de volgende stap.
 
 ![Curl commando uitgevoerd](doc/screenshot3.png)
 
-3. Voer het volgende commando uit om pip te installeren, wacht opnieuw tot het commando afgerond is vooraleer naar de volgende stap te gaan.
+3. Voer ook volgende commando's uit om pip te installeren:
 
 ```
 python get-pip.py
 ```
 
+```
+export PATH=$PATH:~/Library/Python/2.7/bin
+```
+
+4. Nu kan pip gebruikt worden om openpyxl en xattr te installeren:
+
+```
+pip install openpyxl
+```
+
+```
+pip install xattr
+```
