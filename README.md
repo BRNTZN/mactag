@@ -16,6 +16,15 @@ Script to read tags from an excel file and apply them to listed files
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 ```
 
+![Curl commando](doc/screenshot2.png)
+
 Als je je eigen username onderaan terug ziet verschijnen gevolgd door @localhost dan is het commando klaar en kan je naar de volgende stap.
 
-3. 
+![Curl commando uitgevoerd](doc/screenshot3.png)
+
+3. Voer het volgende commando uit om pip te installeren, wacht opnieuw tot het commando afgerond is vooraleer naar de volgende stap te gaan.
+
+```
+python get-pip.py
+```
+
