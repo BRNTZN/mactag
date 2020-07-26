@@ -13,10 +13,9 @@ tagMetadataName = 'com.apple.metadata:_kMDItemUserTags'
 tagXmlTemplate = r"""'<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0"><array>{taglist}</array></plist>'""" 
 
 
-clearMetadataOutput = subprocess.check_output(command, shell=True, cwd = os.path.dirname(os.path.realpath(__file__)))
+clearMetadataOutput = subprocess.check_output(clearMetadataCommand, shell=True, cwd = os.path.dirname(os.path.realpath(__file__)))
 
-print('Clearing metadata')
-print(output)
+print('Clearing metadata... \r'+ output)
 
 
 workbook = load_workbook('mactag.xlsx')
