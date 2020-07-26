@@ -7,8 +7,8 @@ import openpyxl
 
 from openpyxl import load_workbook
 
-currentPath = os.path.dirname(os.path.realpath(__file__)) + '\\'
-workbook = load_workbook(currentPath + 'mactag.xlsx')
+currentPath = os.path.dirname(os.path.realpath(__file__))
+workbook = load_workbook(currentPath + '/mactag.xlsx')
 sheet = workbook.active
 
 for row in sheet.values:
