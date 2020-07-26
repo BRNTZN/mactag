@@ -15,7 +15,7 @@ tagXmlTemplate = r"""'<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http
 
 clearMetadataOutput = subprocess.check_output(clearMetadataCommand, shell=True, cwd = os.path.dirname(os.path.realpath(__file__)))
 
-print('Clearing metadata... \r'+ output)
+print('Clearing metadata... \r'+ clearMetadataOutput)
 
 
 workbook = load_workbook('mactag.xlsx')
