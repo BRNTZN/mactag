@@ -4,7 +4,6 @@
 import subprocess
 import os
 import openpyxl
-import xattr
 
 from openpyxl import load_workbook
 
@@ -33,7 +32,7 @@ for row in sheet.values:
 	newMetadataValue = tagXmlTemplate.format(taglist = xmlTags)
 	print(fileName + ': ' + tags)
 	print(newMetadataValue)
-	xattr.setxattr(currentPath + '/' + fileName, tagMetadataName, newMetadataValue)
+	subprocess.check_output('xattr -w ' + tagMetadataName + ' ' + newMetadataValue + ' ' + fileName], shell=True, cwd = currentPath)
 
 
 print('Finished')
