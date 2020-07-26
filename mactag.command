@@ -33,7 +33,7 @@ for row in sheet.values:
 	newMetadataValue = tagXmlTemplate.format(taglist = xmlTags)
 	print(fileName + ': ' + tags)
 	print(newMetadataValue)
-	xattr.setxattr(fileName, tagMetadataName, newMetadataValue)
+	xattr.setxattr(currentPath + '/' + fileName, tagMetadataName, newMetadataValue)
 
 
 print('Finished')
