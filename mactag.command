@@ -8,7 +8,7 @@ import xattr
 
 from openpyxl import load_workbook
 
-currentPath = os.path.dirname(os.path.realpath(__file__)) + '\'
+currentPath = os.path.dirname(os.path.realpath(__file__)) + '\\'
 clearMetadataCommand = 'ls -l; xattr -rc .;'
 tagMetadataName = 'com.apple.metadata:_kMDItemUserTags'
 tagXmlTemplate = r"""'<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0"><array>{taglist}</array></plist>'""" 
