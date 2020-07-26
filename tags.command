@@ -18,7 +18,7 @@ clearMetadataOutput = subprocess.check_output(clearMetadataCommand, shell=True, 
 print('Clearing metadata... \r'+ clearMetadataOutput)
 
 
-workbook = load_workbook(currentPath + '/mactag.xlsx')
+workbook = load_workbook(currentPath + '/tags.xlsx')
 sheet = workbook.active
 
 for row in sheet.values:

@@ -13,10 +13,10 @@ Rechtsboven staat een groene knop met het woordje Code erop, klik erop en klik d
 
 Als je browser vraagt of het ok is om van github te downloaden klik je op `Allow`
 
-Pak de het ZIP bestand uit door er op te dubbelklikken, nu staat er een nieuwe map in je Downloads map.
+Pak het ZIP bestand uit door er op te dubbelklikken, nu staat er een nieuwe map in je Downloads map.
 
 
-2. Eerst moeten er bepaalde componenten geïnstalleerd worden, open de LaunchPad en start een terminal:
+2. Open de LaunchPad en start een terminal:
 
 ![Open terminal op mac](doc/screenshot1.png)
 
@@ -33,7 +33,7 @@ Als je je eigen username onderaan terug ziet verschijnen dan is het commando kla
 
 ![Curl commando uitgevoerd](doc/screenshot3.png)
 
-4. Voer ook volgende commando's uit om pip te installeren:
+Voer ook volgende commando's uit om pip te installeren:
 
 ```
 python get-pip.py
@@ -56,4 +56,12 @@ pip install openpyxl
 chmod 755 ~/Downloads/mactag-master/tags.command
 ```
 
-Voila, het script is geïnstalleerd. Je kan nu het script verplaatsen naar de folder waar de bestanden die getagged moeten worden zich bevinden, alsook het excel bestand.
+Als mac je vraagt of terminal aan je bestanden mag komen klik je op ok.
+
+Voila, het script is geïnstalleerd. 
+
+Om te testen rechtermuisklik op tags.command in de mactag-master folder in je downloads. Klik dan op openen. Klik vervolgens op Open.
+
+Het script voert nu uit en de fotos eiffel en pisa hebben tags gekregen zoals vermeld in tags.xlsx
+
+Je kan nu het script verplaatsen naar de folder waar de bestanden die getagged moeten worden zich bevinden, zorg dat er ook een xlsx bestand staat genaamd `tags.xlsx` met de nodige tags.
