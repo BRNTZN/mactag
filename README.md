@@ -11,6 +11,8 @@ Deze stappen dienen eenmalig uitgevoerd te worden:
 
 Rechtsboven staat een groene knop met het woordje Code erop, klik erop en klik dan op `Download ZIP`
 
+Als je browser vraagt of het ok is om van github te downloaden klik je op `Allow`
+
 Pak de het ZIP bestand uit door er op te dubbelklikken, nu staat er een nieuwe map in je Downloads map.
 
 
