@@ -9,13 +9,9 @@ Deze stappen dienen eenmalig uitgevoerd te worden:
 
 1. Download het script: 
 
-Rechts op de pagina staan de releases. Klik op de meest recente release! Op dit moment is dat 1.0.0:
+Rechtsboven staat een groene knop met het woordje Code erop, klik erop en klik dan op `Download ZIP`
 
-
-![Releases](doc/releases.png)
-
-
-Download dan `mactag.command` door er op te klikken. Het script zal dan in je downloads folder terecht komen, laat deze voorlopig staan.
+Pak de het ZIP bestand uit door er op te dubbelklikken, nu staat er een nieuwe map in je Downloads map.
 
 
 2. Eerst moeten er bepaalde componenten geïnstalleerd worden, open de LaunchPad en start een terminal:
@@ -45,24 +41,17 @@ python get-pip.py
 export PATH=$PATH:~/Library/Python/2.7/bin
 ```
 
-5. Nu kan pip gebruikt worden om openpyxl en xattr te installeren:
+5. Nu kan pip gebruikt worden om openpyxl te installeren:
 
 ```
 pip install openpyxl
-```
-
-```
-pip install xattr
 ```
 
 
 6. Nu enkel nog de permissies goedzetten voor het script:
 
 ```
-chmod 755 ~/Downloads/mactag.command
+chmod 755 ~/Downloads/mactag-master/tags.command
 ```
 
-Voila, mactag is geïnstalleerd. Je kan nu het script verplaatsen naar de folder waar de bestanden die getagged moeten worden zich bevinden, alsook het excel bestand.
-
-
-## Gebruik
+Voila, het script is geïnstalleerd. Je kan nu het script verplaatsen naar de folder waar de bestanden die getagged moeten worden zich bevinden, alsook het excel bestand.
