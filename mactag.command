@@ -8,17 +8,18 @@ import xattr
 
 from openpyxl import load_workbook
 
+currentPath = os.path.dirname(os.path.realpath(__file__)) + '\'
 clearMetadataCommand = 'ls -l; xattr -rc .;'
 tagMetadataName = 'com.apple.metadata:_kMDItemUserTags'
 tagXmlTemplate = r"""'<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0"><array>{taglist}</array></plist>'""" 
 
 
-clearMetadataOutput = subprocess.check_output(clearMetadataCommand, shell=True, cwd = os.path.dirname(os.path.realpath(__file__)))
+clearMetadataOutput = subprocess.check_output(clearMetadataCommand, shell=True, cwd = currentPath)
 
 print('Clearing metadata... \r'+ clearMetadataOutput)
 
 
-workbook = load_workbook('mactag.xlsx')
+workbook = load_workbook(currentPath + 'mactag.xlsx')
 sheet = workbook.active
 
 for row in sheet.values:
