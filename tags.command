@@ -25,14 +25,15 @@ for row in sheet.values:
 	tags = ''
 	xmlTags = ''
 	fileName = str(row[0])
-	for value in row[1:]:
-		if value != None:
-			tags += str(value) + ', '
-			xmlTags += '<string>' + str(value) + '</string>'
-	newMetadataValue = tagXmlTemplate.format(taglist = xmlTags)
-	print(fileName + ': ' + tags)
-	print(newMetadataValue)
-	subprocess.check_output('xattr -w ' + tagMetadataName + ' ' + newMetadataValue + ' ' + fileName, shell=True, cwd = currentPath)
+	if fileName != 'name file':
+		for value in row[1:]:
+			if value != None:
+				tags += str(value) + ', '
+				xmlTags += '<string>' + str(value) + '</string>'
+		newMetadataValue = tagXmlTemplate.format(taglist = xmlTags)
+		print(fileName + ': ' + tags)
+		print(newMetadataValue)
+		subprocess.check_output('xattr -w ' + tagMetadataName + ' ' + newMetadataValue + ' ' + fileName, shell=True, cwd = currentPath)
 
 
 print('Finished')
