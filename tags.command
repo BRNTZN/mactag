@@ -10,6 +10,7 @@ from openpyxl import load_workbook
 currentPath = os.path.dirname(os.path.realpath(__file__))
 clearMetadataCommand = 'ls -l; xattr -rc .;'
 tagMetadataName = 'com.apple.metadata:_kMDItemUserTags'
+tagMetadataName2 = 'com.apple.metadata:kMDItemOMUserTags'
 tagXmlTemplate = r"""'<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0"><array>{taglist}</array></plist>'""" 
 
 
@@ -34,6 +35,7 @@ for row in sheet.values:
 		print(fileName + ': ' + tags)
 		print(newMetadataValue)
 		subprocess.check_output('xattr -w ' + tagMetadataName + ' ' + newMetadataValue + ' ' + fileName, shell=True, cwd = currentPath)
+		subprocess.check_output('xattr -w ' + tagMetadataName2 + ' ' + newMetadataValue + ' ' + fileName, shell=True, cwd = currentPath)
 
 
 print('Finished')
