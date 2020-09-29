@@ -4,6 +4,8 @@
 import subprocess
 import os
 import openpyxl
+import xattr
+import biplist
 
 from openpyxl import load_workbook
 
@@ -20,6 +22,9 @@ print('Clearing metadata... \r'+ clearMetadataOutput)
 workbook = load_workbook(currentPath + '/tags.xlsx')
 sheet = workbook.active
 
+
+print os.path.abspath(__file__)
+
 for row in sheet.values:
 	tags = ''
 	xmlTags = ''
@@ -33,7 +38,7 @@ for row in sheet.values:
 		print(fileName + ': ' + tags)
 		print(newMetadataValue)
 		for metadataName in ['com.apple.metadata:_kMDItemUserTags', 'com.apple.metadata:kMDItemOMUserTags', 'com.apple.metadata:kMDItemFinderComment']:
-			subprocess.check_output('xattr -w ' + metadataName + ' ' + newMetadataValue + ' ' + fileName, shell=True, cwd = currentPath)
-
+			bpl_tags = biplist.writePlistToString(row[1:])
+			xattr.setxattr(os.path.dirname(os.path.realpath(__file__)) + '/' + fileName, metadataName, bpl_tags)
 
 print('Finished')

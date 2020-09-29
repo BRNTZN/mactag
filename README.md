@@ -43,12 +43,15 @@ python get-pip.py
 export PATH=$PATH:~/Library/Python/2.7/bin
 ```
 
-5. Nu kan pip gebruikt worden om openpyxl te installeren:
+5. Nu kan pip gebruikt worden om openpyxl en biplist te installeren:
 
 ```
 pip install openpyxl
 ```
 
+```
+pip install biplist
+```
 
 6. Nu enkel nog de permissies goedzetten voor het script:
 
